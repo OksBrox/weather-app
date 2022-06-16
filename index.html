@@ -26,74 +26,82 @@
     <title>Weather</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="current-weather col-4">
-          <form class="search">
-            <input
-              type="text"
-              placeholder="Enter city"
-              class="search-bar"
-              id="search-bar"
-            />
-            <button class="search-button" type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-          <button id="current-location">Current location</button>
-          <h1 class="current-city" id="current-city">Kyiv</h1>
-          <i class="fa-solid fa-cloud-sun current-weather-img"></i>
-          <h2 class="current-temperature">
-            <span id="temperature-now">17</span>
-            <a href="#" id="current-Celsius">°C</a> |
-            <a href="#" id="current-Fahrenheit">°F</a>
-          </h2>
-          <p class="predicted-temperature">22 / 16</p>
-          <p class="current-date"></p>
-        </div>
-        <div class="col-8">
-          <div class="row details">
-            <div class="col current-details">
-              <div class="current-details-name">Wind</div>
-              <div class="current-reading" id="wind">4 mps</div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="current-weather col-4">
+            <form class="search">
+              <input
+                type="text"
+                placeholder="Enter city"
+                class="search-bar"
+                id="search-bar"
+              />
+              <button class="search-button" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <button id="current-location">Current location</button>
+            <h1 class="current-city" id="current-city">Kyiv</h1>
+            <i class="fa-solid fa-cloud-sun current-weather-img"></i>
+            <h2 class="current-temperature">
+              <span id="temperature-now">17</span>
+              <a href="#" id="current-Celsius">°C</a> |
+              <a href="#" id="current-Fahrenheit">°F</a>
+            </h2>
+            <p class="predicted-temperature">22 / 16</p>
+            <p class="current-date"></p>
+          </div>
+          <div class="col-8">
+            <div class="row details">
+              <div class="col current-details">
+                <div class="current-details-name">Wind</div>
+                <div class="current-reading" id="wind">4 mps</div>
+              </div>
+              <div class="col current-details">
+                <div class="current-details-name">Pressure</div>
+                <div class="current-reading" id="pressure">1020 hPa</div>
+              </div>
+              <div class="col current-details">
+                <div class="current-details-name">Humidity</div>
+                <div class="current-reading" id="humidity">38%</div>
+              </div>
             </div>
-            <div class="col current-details">
-              <div class="current-details-name">Pressure</div>
-              <div class="current-reading" id="pressure">1020 hPa</div>
-            </div>
-            <div class="col current-details">
-              <div class="current-details-name">Humidity</div>
-              <div class="current-reading" id="humidity">38%</div>
+            <div class="row future-weather">
+              <div class="col future-weather-details">
+                <p class="future-date">Mon</p>
+                <i class="future-weather-img fa-solid fa-cloud-sun"></i>
+                <p class="future-reading">22 °C</p>
+              </div>
+              <div class="col future-weather-details">
+                <p class="future-date">Tue</p>
+                <i class="future-weather-img fa-regular fa-sun"></i>
+                <p class="future-reading">26 °C</p>
+              </div>
+              <div class="col future-weather-details">
+                <p class="future-date">Wed</p>
+                <i class="future-weather-img fa-regular fa-sun"></i>
+                <p class="future-reading">22 °C</p>
+              </div>
+              <div class="col future-weather-details">
+                <p class="future-date">Thu</p>
+                <i class="future-weather-img fa-regular fa-sun"></i>
+                <p class="future-reading">28 °C</p>
+              </div>
+              <div class="col future-weather-details">
+                <p class="future-date">Fri</p>
+                <i class="future-weather-img fa-solid fa-cloud"></i>
+                <p class="future-reading">28 °C</p>
+              </div>
             </div>
           </div>
-          <div class="row future-weather">
-            <div class="col future-weather-details">
-              <p class="future-date">Mon</p>
-              <i class="future-weather-img fa-solid fa-cloud-sun"></i>
-              <p class="future-reading">22 °C</p>
-            </div>
-            <div class="col future-weather-details">
-              <p class="future-date">Tue</p>
-              <i class="future-weather-img fa-regular fa-sun"></i>
-              <p class="future-reading">26 °C</p>
-            </div>
-            <div class="col future-weather-details">
-              <p class="future-date">Wed</p>
-              <i class="future-weather-img fa-regular fa-sun"></i>
-              <p class="future-reading">22 °C</p>
-            </div>
-            <div class="col future-weather-details">
-              <p class="future-date">Thu</p>
-              <i class="future-weather-img fa-regular fa-sun"></i>
-              <p class="future-reading">28 °C</p>
-            </div>
-            <div class="col future-weather-details">
-              <p class="future-date">Fri</p>
-              <i class="future-weather-img fa-solid fa-cloud"></i>
-              <p class="future-reading">28 °C</p>
-            </div>
-          </div>
         </div>
+      </div>
+      <div class="author">
+        <a href="https://github.com/OksBrox/weather-app" class="author-link"
+          >Open-source code</a
+        >
+        by Oksana B.
       </div>
     </div>
     <script src="src/javascript.js"></script>
