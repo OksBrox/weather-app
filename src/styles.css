@@ -9,10 +9,8 @@ body {
 }
 .container {
   background: rgba(131, 175, 166, 0.5);
-  /* width: 80%; */
   max-width: 900px;
   min-width: 450px;
-  /* margin: 40px auto 20px; */
   border-radius: 20px;
   padding: 30px;
 }
@@ -165,7 +163,4 @@ body {
 
 .future-reading {
   margin: 0;
-}
-
-.author {
 }
