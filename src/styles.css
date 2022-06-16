@@ -6,11 +6,11 @@ body {
 .wrapper {
   width: 80%;
   margin: 40px auto 20px;
+  max-width: 900px;
+  min-width: 450px;
 }
 .container {
   background: rgba(131, 175, 166, 0.5);
-  max-width: 900px;
-  min-width: 450px;
   border-radius: 20px;
   padding: 30px;
 }
