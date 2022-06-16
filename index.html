@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7c321a5482.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="current-weather col-4">
+          <form class="search">
+            <input
+              type="text"
+              placeholder="Enter city"
+              class="search-bar"
+              id="search-bar"
+            />
+            <button class="search-button" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <button id="current-location">Current location</button>
+          <h1 class="current-city" id="current-city">Kyiv</h1>
+          <i class="fa-solid fa-cloud-sun current-weather-img"></i>
+          <h2 class="current-temperature">
+            <span id="temperature-now">17</span>
+            <a href="#" id="current-Celsius">°C</a> |
+            <a href="#" id="current-Fahrenheit">°F</a>
+          </h2>
+          <p class="predicted-temperature">22 / 16</p>
+          <p class="current-date"></p>
+        </div>
+        <div class="col-8">
+          <div class="row details">
+            <div class="col current-details">
+              <div class="current-details-name">Wind</div>
+              <div class="current-reading" id="wind">4 mps</div>
+            </div>
+            <div class="col current-details">
+              <div class="current-details-name">Pressure</div>
+              <div class="current-reading" id="pressure">1020 hPa</div>
+            </div>
+            <div class="col current-details">
+              <div class="current-details-name">Humidity</div>
+              <div class="current-reading" id="humidity">38%</div>
+            </div>
+          </div>
+          <div class="row future-weather">
+            <div class="col future-weather-details">
+              <p class="future-date">Mon</p>
+              <i class="future-weather-img fa-solid fa-cloud-sun"></i>
+              <p class="future-reading">22 °C</p>
+            </div>
+            <div class="col future-weather-details">
+              <p class="future-date">Tue</p>
+              <i class="future-weather-img fa-regular fa-sun"></i>
+              <p class="future-reading">26 °C</p>
+            </div>
+            <div class="col future-weather-details">
+              <p class="future-date">Wed</p>
+              <i class="future-weather-img fa-regular fa-sun"></i>
+              <p class="future-reading">22 °C</p>
+            </div>
+            <div class="col future-weather-details">
+              <p class="future-date">Thu</p>
+              <i class="future-weather-img fa-regular fa-sun"></i>
+              <p class="future-reading">28 °C</p>
+            </div>
+            <div class="col future-weather-details">
+              <p class="future-date">Fri</p>
+              <i class="future-weather-img fa-solid fa-cloud"></i>
+              <p class="future-reading">28 °C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/javascript.js"></script>
+  </body>
+</html>
