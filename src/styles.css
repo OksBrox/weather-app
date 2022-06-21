@@ -77,17 +77,13 @@ body {
 }
 
 .current-city {
-  margin: 20px auto;
+  margin: 20px auto 0;
   font-weight: 900;
   color: rgb(38, 50, 56);
 }
 
-.current-weather-img {
-  font-size: 60px;
-}
-
 .current-temperature {
-  margin: 20px auto;
+  margin: 0 auto 20px;
   font-weight: 700;
 }
 
@@ -153,12 +149,11 @@ body {
 .future-date {
   text-transform: uppercase;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .future-weather-img {
   font-size: 30px;
-  margin-bottom: 10px;
 }
 
 .future-reading {
