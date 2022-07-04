@@ -30,10 +30,10 @@ let year = new Date().getFullYear();
 currentDate.innerHTML = `${today}<br>${month} ${todayDate}, ${year}`;
 
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#temperature-now").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature-now").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
@@ -81,15 +81,28 @@ function getCurrentLocation(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-now");
-  temperatureElement.innerHTML = 66;
+  document.querySelector("#temperature-now").innerHTML = Math.round(
+    (parseInt(celsiusTemperature) * 9) / 5 + 32
+  );
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-now");
-  temperatureElement.innerHTML = 19;
+  document.querySelector("#temperature-now").innerHTML =
+    Math.round(celsiusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
 }
+
+let fahrenheitLink = document.querySelector("#current-Fahrenheit");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#current-Celsius");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+let celsiusTemperature;
 
 let searchForm = document.querySelector(".search");
 searchForm.addEventListener("submit", handleSubmit);

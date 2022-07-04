@@ -93,6 +93,10 @@ body {
   color: rgb(38, 50, 56);
 }
 
+.current-temperature .active {
+  cursor: default;
+}
+
 .predicted-temperature,
 .current-date {
   font-size: 18px;
