@@ -1,5 +1,4 @@
 let currentDate = document.querySelector(".current-date");
-
 let days = [
   "Sunday",
   "Monday",
@@ -44,6 +43,15 @@ function displayWeatherCondition(response) {
   document.querySelector(
     "#pressure"
   ).innerHTML = `${response.data.main.pressure} hPa`;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", `${response.data.weather[0].main}`);
 }
 
 function searchCity(city) {

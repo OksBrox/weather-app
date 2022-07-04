@@ -80,6 +80,7 @@ body {
   margin: 20px auto 0;
   font-weight: 900;
   color: rgb(38, 50, 56);
+  overflow-wrap: break-word;
 }
 
 .current-temperature {
