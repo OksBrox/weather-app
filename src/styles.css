@@ -90,11 +90,12 @@ body {
 
 .current-temperature a {
   text-decoration: none;
-  color: rgb(38, 50, 56);
+  color: rgba(38, 50, 56, 0.6);
 }
 
 .current-temperature .active {
   cursor: default;
+  color: rgb(38, 50, 56);
 }
 
 .predicted-temperature,
