@@ -38,7 +38,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTMl = "";
   forecast.forEach(function (forecastDay, index) {
@@ -124,28 +123,28 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  document.querySelector("#temperature-now").innerHTML = Math.round(
-    (parseInt(celsiusTemperature) * 9) / 5 + 32
-  );
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
+// function convertToFahrenheit(event) {
+//   event.preventDefault();
+//   document.querySelector("#temperature-now").innerHTML = Math.round(
+//     (parseInt(celsiusTemperature) * 9) / 5 + 32
+//   );
+//   celsiusLink.classList.remove("active");
+//   fahrenheitLink.classList.add("active");
+// }
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  document.querySelector("#temperature-now").innerHTML =
-    Math.round(celsiusTemperature);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
+// function convertToCelsius(event) {
+//   event.preventDefault();
+//   document.querySelector("#temperature-now").innerHTML =
+//     Math.round(celsiusTemperature);
+//   fahrenheitLink.classList.remove("active");
+//   celsiusLink.classList.add("active");
+// }
 
-let fahrenheitLink = document.querySelector("#current-Fahrenheit");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+// let fahrenheitLink = document.querySelector("#current-Fahrenheit");
+// fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celsiusLink = document.querySelector("#current-Celsius");
-celsiusLink.addEventListener("click", convertToCelsius);
+// let celsiusLink = document.querySelector("#current-Celsius");
+// celsiusLink.addEventListener("click", convertToCelsius);
 
 let celsiusTemperature;
 

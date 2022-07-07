@@ -88,15 +88,10 @@ body {
   font-weight: 700;
 }
 
-.current-temperature a {
+/* .current-temperature a {
   text-decoration: none;
   color: rgba(38, 50, 56, 0.6);
-}
-
-.current-temperature .active {
-  cursor: default;
-  color: rgb(38, 50, 56);
-}
+} */
 
 .predicted-temperature,
 .current-date {
