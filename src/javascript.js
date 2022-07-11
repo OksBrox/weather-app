@@ -102,7 +102,18 @@ function searchCity(city) {
   let apiKey = "b2d6f6a9f3da8414aade5b1c466f79b1";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(displayWeatherCondition);
+  function UrlExists(apiUrl) {
+    var http = new XMLHttpRequest();
+    http.open("HEAD", apiUrl, false);
+    http.send();
+    if (http.status != 404) {
+      axios.get(apiUrl).then(displayWeatherCondition);
+    } else {
+      document.querySelector("#current-city").innerHTML =
+        "Please enter a valid city";
+    }
+  }
+  UrlExists(apiUrl);
 }
 
 function handleSubmit(event) {
